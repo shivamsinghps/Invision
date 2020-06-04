@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
@@ -11,6 +12,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import classess from './SideDrawer.module.css'
+
 
 const useStyles = makeStyles({
 
@@ -43,12 +45,16 @@ const SideDrawer=()=> {
       onClick={toggleDrawer}
     >
       <List>
-        {['Home', 'Latest News', 'AboutUs', 'Contact Us'].map((text, index) => (
+        {['Home', 'Latest', 'AboutUs', 'Contact','Blog'].map((text, index) => {
+          const link = "/"+text
+          return(
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText classes={{ root: classes.text }} primary={text} />
+           <NavLink to={link} exact style={{ textDecoration: 'none' }}><ListItemText classes={{ root: classes.text }} primary={text} />
+           </NavLink>
           </ListItem>
-        ))}
+
+        )})}
       </List>
       <Divider />
       <List>

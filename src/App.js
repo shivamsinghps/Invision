@@ -1,9 +1,11 @@
 import React , { Fragment }from 'react';
 import './App.css';
-
+import { Route , Switch , Redirect } from 'react-router-dom'
+import SideDrawer from './components/UI/SideDrawer/SideDrawer'
 import ReadProgress from './containers/ReadingProgress/ReadingProgress'
 import Layout from './containers/Layout/Layout'
-import Header from './components/UI/Header/Header'
+import Home from './components/UI/Home/Home'
+import Blog from './containers/Blog/Blog'
 
 const target = React.createRef();
     // <ReadProgress target={target} />
@@ -13,7 +15,13 @@ function App() {
   <ReadProgress target={target} />
       <div className="App" ref={target}>
         <Layout>
-          <Header />
+            <SideDrawer />
+        <Switch>
+          <Route path='/Blog' exact component={Blog} />
+          <Route path='/Home' exact component={Home} />
+          <Route path='/' exact component={Home} />
+          <Redirect to='/' />
+        </Switch>
         </Layout>
       </div>
   </Fragment>
@@ -21,3 +29,4 @@ function App() {
 }
 
 export default App;
+// <Route path='/Blog' component={Blog} />

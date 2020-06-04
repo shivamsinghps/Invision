@@ -1,6 +1,45 @@
-.Menu{
-  position:relative;
-  float: right;
-  top:10px;
-  right: 10px;
+.Menu {
+  z-index: 500;
+  position: fixed;
+  top:20px;
+  right:20px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  display: inline;
+}
+.ToolBar h1{
+  display: inline;
+  padding: 10px;
+  font-family: cursive;
+  font-style: oblique;
+  font-size: 44px;
+  color: white;
+  border-style: solid;;
+  border-radius: 6px;
+  border-color: white;
+  border-width: 4px;
+
+}
+
+.ToolBar h2{
+  position: fixed;
+  display: inline;
+  top: 5px;
+  right:15px;
+  margin-top: 0;
+}
+
+@media (max-width:500px) {
+  .ToolBar {
+    top: 15px;
+  }
+
+  .ToolBar h1 {
+    font-size: 24px;
+  }
+
+  .ToolBar h2 {
+    right:8px;
+  }
+
 }
