@@ -1,5 +1,6 @@
 .Layout {
+  position: relative;
   text-align: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
