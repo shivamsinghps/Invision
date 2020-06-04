@@ -27,8 +27,10 @@ export default function AlertDialogSlide() {
       <p onClick={handleClickOpen}>
         SUBMIT
       </p>
+      {open && (
+
       <Dialog
-        open={open}
+        open = {open}
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
@@ -46,7 +48,7 @@ export default function AlertDialogSlide() {
             Back
           </Button>
         </DialogActions>
-      </Dialog>
+      </Dialog>)}
     </div>
   );
 }
