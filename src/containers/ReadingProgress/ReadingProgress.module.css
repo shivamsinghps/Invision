@@ -1,7 +1,9 @@
 .reading_progress_bar{
   position: fixed;
-  height: 5px;
+  height: 6px;
   top: 0;
-  background-color:#333333;
+  border-radius: 0 3px 3px 0;
+  background: rgb(251,244,247);
+  background: radial-gradient(circle, rgba(251,244,247,1) 12%, rgba(80,3,157,1) 45%, rgba(63,2,125,1) 49%, rgba(255,255,255,1) 90%);
   z-index: 999;
 }

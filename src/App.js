@@ -6,6 +6,7 @@ import ReadProgress from './containers/ReadingProgress/ReadingProgress'
 import Layout from './containers/Layout/Layout'
 import Home from './components/UI/Home/Home'
 import Blog from './containers/Blog/Blog'
+import AboutUs from './components/AboutUs/AboutUs'
 
 const target = React.createRef();
     // <ReadProgress target={target} />
@@ -17,7 +18,8 @@ function App() {
         <Layout>
             <SideDrawer />
         <Switch>
-          <Route path='/Blog' exact component={Blog} />
+          <Route path='/OurWork' exact component={Blog} />
+          <Route path='/AboutUs' exact component={AboutUs} />
           <Route path='/Home' exact component={Home} />
           <Route path='/' exact component={Home} />
           <Redirect to='/' />

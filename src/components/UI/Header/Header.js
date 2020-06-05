@@ -6,7 +6,7 @@ let height = props.height?props.height+'px':null
 let back = props.back? props.back + '%' : null
 
   return(
-    <header className={classes.Header} style={{height:height,lineHeight:height, backgroundPositionY:back,background: `url(${headerBackground}) no-repeat 50% 50%`}}>
+    <header className={classes.Header} style={{height:height,lineHeight:height, backgroundPositionY:back,backgroundImage: `url(${headerBackground})`}}>
       <h1>Heading</h1>
     </header>
   )

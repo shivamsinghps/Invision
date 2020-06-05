@@ -1,29 +1,16 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
-import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import classess from './SideDrawer.module.css'
-
+import SideList from './List/List'
 
 const useStyles = makeStyles({
 
   list: {
     width: 250,
-  },
-  text:{
-    color:'white'
-  },
-  fullList: {
-    width: 'auto',
   },
   paper: {
   background: "#333333"
@@ -33,7 +20,8 @@ const useStyles = makeStyles({
 const SideDrawer=()=> {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-
+  const primarylinks = ['Home','AboutUs','OurWork','Techs','Career','Vision','Contact']
+  const seclinks = ['UnBunked','TeamAnonymous']
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -44,35 +32,17 @@ const SideDrawer=()=> {
       role="presentation"
       onClick={toggleDrawer}
     >
-      <List>
-        {['Home', 'Latest', 'AboutUs', 'Contact','Blog'].map((text, index) => {
-          const link = "/"+text
-          return(
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-           <NavLink to={link} exact style={{ textDecoration: 'none' }}><ListItemText classes={{ root: classes.text }} primary={text} />
-           </NavLink>
-          </ListItem>
-
-        )})}
-      </List>
+      <SideList links={primarylinks} />
       <Divider />
-      <List>
-        {['UnBunked', 'Team Anonymous'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <SideList links={seclinks} />
     </div>
   );
 
   return (
         <React.Fragment>
-        <div className={classess.Menu}>
-          <Button onClick={toggleDrawer}><MenuIcon /></Button>
-        </div>
+          <div className={classess.Menu}>
+            <Button onClick={toggleDrawer}><MenuIcon /></Button>
+          </div>
           <Drawer classes={{ paper: classes.paper }} anchor='right' open={open} onClose={toggleDrawer}>
             {list}
           </Drawer>
