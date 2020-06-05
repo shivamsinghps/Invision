@@ -8,15 +8,16 @@
   background-size: cover;
   z-index: -1;
   overflow: scroll;
-
-
 }
 
 .Lable{
   display: block;
-  font-size:24px;
+  font-size:36px;
+  text-decoration: underline;
+  text-decoration-color: #888888;
   font-weight: bold;
-  color: black;
+  color: white;
+  text-shadow: 2px 2px #888888;
 }
 
 .Ourteam{
@@ -27,6 +28,8 @@
   margin-bottom: 70px;
   background-color: white;
   border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 0 3px #e8e4e1;
 }
 
 

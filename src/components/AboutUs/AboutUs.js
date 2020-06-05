@@ -18,7 +18,7 @@ const profile = {
     <h1 className={classes.Reveal}>About Us</h1>
 
     <div className={classes.Ourteam}>
-    <label className={classes.Lable}>Our Motto</label>
+    <label className={classes.Lable}>Our Vision</label>
     </div>
     <div className={classes.Ourteam}>
     <label className={classes.Lable}>Our Team</label>

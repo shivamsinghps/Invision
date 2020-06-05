@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 const SideDrawer=()=> {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const primarylinks = ['Home','AboutUs','OurWork','Techs','Career','Vision','Contact']
+  const primarylinks = ['Home','AboutUs','OurWork','Techs','Career','Contact']
   const seclinks = ['UnBunked','TeamAnonymous']
   const toggleDrawer = () => {
     setOpen(!open);
@@ -45,7 +45,11 @@ const SideDrawer=()=> {
           </div>
           <Drawer classes={{ paper: classes.paper }} anchor='right' open={open} onClose={toggleDrawer}>
             {list}
+            <h5 className={classess.Lable} >&copy; Invision<br />Terms & Conditions</h5>
+
+
           </Drawer>
+
         </React.Fragment>
   );
 }
