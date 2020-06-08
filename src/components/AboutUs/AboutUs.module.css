@@ -34,7 +34,7 @@
 
 
 .Reveal{
-  position: fixed;
+  
   float: left;
   text-shadow: 3px 3px grey;
   color:white;
@@ -42,4 +42,5 @@
   font-size: 48px;
   font-style: oblique;
   font-weight: bold;
+  display: block;
 }

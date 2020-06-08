@@ -9,6 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import mailLOGO from '../../../images/envelope-solid.svg'
 import TextField from '@material-ui/core/TextField';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,7 +34,10 @@ const Header = (props)=>{
         <p>Logo</p>
       </div>
 
-
+      <Grid container spacing={2}
+              direction="row"
+  justify="flex-end"
+  alignItems="center">
         <Card className={classes.root} border={1} variant="outlined">
             <CardContent>
                 <Typography className={classess.title} >
@@ -47,6 +51,7 @@ const Header = (props)=>{
                 </form>
             </CardContent>
         </Card>
+        </Grid>
     </header>
   )
 }

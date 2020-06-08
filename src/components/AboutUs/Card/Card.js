@@ -9,8 +9,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 200,
-    margin:'10px',
-    padding:'20px',
+
   },
   media: {
     height:'100px',
@@ -27,8 +26,8 @@ const ProfileCard = (props) => {
     setPop(false);
   };
   return (
-    <Card  direction="row" className={classes.root} style={{height:props.contact?'300px':null}}onMouseOver={popUp} onMouseOut={popDown} raised={ pop? true:false} >
-      <CardActionArea style={{height:props.contact?'300px':null}}>
+    <Card  direction="row" className={classes.root} onMouseOver={popUp} onMouseOut={popDown} raised={ pop? true:false} >
+      <CardActionArea>
         <CardMedia style={{}}
           className={classes.media}
           image={props.imageUrl}
