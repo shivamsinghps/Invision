@@ -2,16 +2,16 @@
   width: 100%;
   height: 100vh;
   top: 0;
-  background-attachment: fixed;
+  background-attachment:scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
   overflow: hidden;
   position: relative;
-  right: 0px;
-  transition: right 0.4s;
-  transition-timing-function:linear;
+  right : 0px;
+  transition: right 0.9s ease-out;
+
 }
 .MailLogo{
   position: relative;

@@ -29,7 +29,7 @@ const Header = (props)=>{
    console.log(props.side);
  }
   return(
-    <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `,right:props.side?'20vw':null}}>
+    <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `,right:props.side?'24vw':null}}>
 
 
         <Logo />
