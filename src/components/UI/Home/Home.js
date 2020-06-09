@@ -9,50 +9,71 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import mailLOGO from '../../../images/envelope-solid.svg'
 import TextField from '@material-ui/core/TextField';
-import { Grid } from '@material-ui/core';
+import { Grid,Slide,Container } from '@material-ui/core';
+import Fade from '@material-ui/core/Fade';
+import Logo from '../Logo/Logo'
+import {connect} from 'react-redux'
+
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '45ch',
-  },
-  },
+
   title: {
-    fontSize: 34,
+    fontSize: 22,
   }
 }));
 const Header = (props)=>{
   const classess = useStyles();
   const submitHandler = (e) =>{
    e.preventDefault()
-   console.log('submitted');
+
+   console.log(props.side);
  }
   return(
-    <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `}}>
-      <div className={classes.Logo}>
-        <p>Logo</p>
-      </div>
+    <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `,right:props.side?'20vw':null}}>
 
-      <Grid container spacing={2}
+
+        <Logo />
+
+
+    <Slide direction='right' in={true} timeout={1000}>
+      <Grid container
               direction="row"
-  justify="flex-end"
-  alignItems="center">
-        <Card className={classes.root} border={1} variant="outlined">
+              justify="flex-start"
+              alignItems="center"
+              style={{height:'90vh'}}>
+        <Grid item xs={12} sm={4}>
+        <Card style={{margin:'50px',opacity:'0.8'}} border={1} variant="outlined">
             <CardContent>
                 <Typography className={classess.title} >
                   Join Us! Let's Move Forward
-                </Typography><img className={classes.MailLogo} src={mailLOGO} alt='mail-logo' />
+                </Typography>
             </CardContent>
             <CardContent>
                 <form  onSubmit={submitHandler} noValidate>
-                <TextField style={{width:'60%',marginBottom:'10px'}} id="filled-basic" label="EmailID" variant="filled" />
+                <TextField style={{width:'70%',marginBottom:'5px'}} id="filled-basic" label="EmailID" variant="filled" />
                 <Button type='submit' style={{display:'block',width:'50%',margin:'auto'}}><SubmitModal /></Button>
                 </form>
             </CardContent>
         </Card>
         </Grid>
-    </header>
+        <Grid item xs={8} sm={4} md={3}>
+        <Container >
+
+          <h1 style={{color:'white'}}>Let's Boost the productivity with<span>AI</span></h1>
+        </Container>
+        </Grid>
+
+        </Grid>
+        </Slide>
+</header>
   )
 }
-export default Header
+
+const mapStateToProps = state =>{
+  return{
+  side:state.ui.side
+}}
+
+
+
+export default connect(mapStateToProps)(Header)
