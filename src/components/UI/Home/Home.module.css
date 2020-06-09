@@ -8,9 +8,9 @@
   background-size: cover;
   z-index: -1;
   overflow: hidden;
-  position: relative;
+  position:fixed;
   right : 0px;
-  transition: right 0.9s ease-out;
+  transition: right 0.5s ease-out;
 
 }
 .MailLogo{

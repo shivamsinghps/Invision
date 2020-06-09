@@ -25,46 +25,44 @@ const Header = (props)=>{
   const classess = useStyles();
   const submitHandler = (e) =>{
    e.preventDefault()
-
-   console.log(props.side);
  }
   return(
-    <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `,right:props.side?'24vw':null}}>
+    <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `,right:props.side?'28vw':null}}>
 
 
         <Logo />
 
 
-    <Slide direction='right' in={true} timeout={1000}>
-      <Grid container
-              direction="row"
-              justify="flex-start"
-              alignItems="center"
-              style={{height:'90vh'}}>
-        <Grid item xs={12} sm={4}>
-        <Card style={{margin:'50px',opacity:'0.8'}} border={1} variant="outlined">
-            <CardContent>
-                <Typography className={classess.title} >
-                  Join Us! Let's Move Forward
-                </Typography>
-            </CardContent>
-            <CardContent>
-                <form  onSubmit={submitHandler} noValidate>
-                <TextField style={{width:'70%',marginBottom:'5px'}} id="filled-basic" label="EmailID" variant="filled" />
-                <Button type='submit' style={{display:'block',width:'50%',margin:'auto'}}><SubmitModal /></Button>
-                </form>
-            </CardContent>
-        </Card>
-        </Grid>
-        <Grid item xs={8} sm={4} md={3}>
-        <Container >
+        <Slide direction='right' in={true} timeout={1000}>
+              <Grid container
+                      direction="row"
+                      justify="flex-start"
+                      alignItems="center"
+                      style={{height:'90vh'}}>
+                <Grid item xs={12} sm={3}>
+                <Card style={{margin:'50px',opacity:'0.8'}} border={1} variant="outlined">
+                    <CardContent>
+                        <Typography className={classess.title} >
+                          Join Us! Let's Move Forward
+                        </Typography>
+                    </CardContent>
+                    <CardContent>
+                        <form  onSubmit={submitHandler} noValidate>
+                        <TextField style={{width:'70%',marginBottom:'5px'}} id="filled-basic" label="EmailID" variant="filled" />
+                        <Button type='submit' style={{display:'block',width:'50%',margin:'auto'}}><SubmitModal /></Button>
+                        </form>
+                    </CardContent>
+                </Card>
+                </Grid>
+                <Grid item xs={8} sm={4} md={3}>
+                <Container >
 
-          <h1 style={{color:'white'}}>Let's Boost the productivity with<span>AI</span></h1>
-        </Container>
-        </Grid>
+                  <h1 style={{color:'white'}}>Let's Boost the productivity with<span>AI</span></h1>
+                </Container>
+                </Grid>
 
-        </Grid>
-        </Slide>
+                </Grid>
+                </Slide>
 </header>
   )
 }

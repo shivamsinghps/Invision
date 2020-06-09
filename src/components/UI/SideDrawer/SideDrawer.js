@@ -12,7 +12,7 @@ import {side_toggle} from '../../../store/actions/ui'
 const useStyles = makeStyles({
 
   list: {
-    width: '25vw',
+    width: '28vw',
   },
   paper: {
   background: "#333333"
@@ -46,7 +46,7 @@ const SideDrawer=(props)=> {
           <div className={classess.Menu}>
             <Button onClick={toggleDrawer}><MenuIcon /></Button>
           </div>
-          <Drawer transitionDuration={1000} BackdropProps={{ invisible: true }} classes={{ paper: classes.paper }} anchor='right' open={open} onClose={toggleDrawer}>
+          <Drawer transitionDuration={600}  classes={{ paper: classes.paper }} anchor='right' open={open} onClose={toggleDrawer}>
             {list}
             <h5 className={classess.Lable} >&copy; Invision<br />Terms & Conditions</h5>
 

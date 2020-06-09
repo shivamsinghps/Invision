@@ -14,7 +14,7 @@ const profile = {
 }
   return(
     <Fragment>
-    <header className={classes.AboutUs} style={{backgroundImage: `url(${imgAboutUs}) `}}>
+    <header className={classes.AboutUs} style={{backgroundImage:`url(${imgAboutUs}) `}}>
     <h1 className={classes.Reveal}>About Us</h1>
 
     <Grid container spacing={2} justify='space-evenly'>
