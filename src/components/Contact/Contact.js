@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Contact.module.css'
 import icon from '../../images/envelope-solid.svg';
 import ProfileCard from '../AboutUs/Card/Card'
+import { Grid,Paper} from '@material-ui/core';
 
 const Contact = (props) => {
   const contacts ={
@@ -12,15 +13,42 @@ const Contact = (props) => {
   }
   return(
     <div className={classes.Contact}>
-      <div className={classes.Contacts}>
-        <div className={classes.Ourteam}>
-          <ProfileCard imageUrl={contacts.imageUrl}
-          imageTitle={contacts.imageTitle}
-          Name={contacts.Name}
-          Description={contacts.Description}
-          contact/>
-        </div>
-      </div>
+        <Grid container
+        spacing={2}
+          direction="row"
+          justify="space-around"
+          alignItems="center"
+          style={{height:'90vh'}}>
+        <Grid item xs={5} md={2}>
+        <ProfileCard imageUrl={contacts.imageUrl}
+        imageTitle={contacts.imageTitle}
+        Name={contacts.Name}
+        Description={contacts.Description}
+        contact/>
+        </Grid>
+        <Grid item xs={5} md={2}>
+        <ProfileCard imageUrl={contacts.imageUrl}
+        imageTitle={contacts.imageTitle}
+        Name={contacts.Name}
+        Description={contacts.Description}
+        contact/>
+        </Grid>
+        <Grid item xs={5} md={2}>
+        <ProfileCard imageUrl={contacts.imageUrl}
+        imageTitle={contacts.imageTitle}
+        Name={contacts.Name}
+        Description={contacts.Description}
+        contact/>
+        </Grid>
+        <Grid item xs={5} md={2}>
+        <ProfileCard imageUrl={contacts.imageUrl}
+        imageTitle={contacts.imageTitle}
+        Name={contacts.Name}
+        Description={contacts.Description}
+        contact/>
+        </Grid>
+
+        </Grid>
     </div>
   )
 }
