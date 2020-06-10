@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Invision/static/css/main.98da2246.chunk.css",
-    "main.js": "/Invision/static/js/main.f81b3151.chunk.js",
-    "main.js.map": "/Invision/static/js/main.f81b3151.chunk.js.map",
+    "main.css": "/Invision/static/css/main.7d9a83cb.chunk.css",
+    "main.js": "/Invision/static/js/main.c4712c51.chunk.js",
+    "main.js.map": "/Invision/static/js/main.c4712c51.chunk.js.map",
     "runtime-main.js": "/Invision/static/js/runtime-main.b1dc85de.js",
     "runtime-main.js.map": "/Invision/static/js/runtime-main.b1dc85de.js.map",
-    "static/js/2.ec63e68f.chunk.js": "/Invision/static/js/2.ec63e68f.chunk.js",
-    "static/js/2.ec63e68f.chunk.js.map": "/Invision/static/js/2.ec63e68f.chunk.js.map",
+    "static/js/2.f2197c7e.chunk.js": "/Invision/static/js/2.f2197c7e.chunk.js",
+    "static/js/2.f2197c7e.chunk.js.map": "/Invision/static/js/2.f2197c7e.chunk.js.map",
     "index.html": "/Invision/index.html",
-    "precache-manifest.fbc80c90c9d897408b46d9babd524d0a.js": "/Invision/precache-manifest.fbc80c90c9d897408b46d9babd524d0a.js",
+    "precache-manifest.564d2508fb5c2782444ad7144814491d.js": "/Invision/precache-manifest.564d2508fb5c2782444ad7144814491d.js",
     "service-worker.js": "/Invision/service-worker.js",
-    "static/css/main.98da2246.chunk.css.map": "/Invision/static/css/main.98da2246.chunk.css.map",
-    "static/js/2.ec63e68f.chunk.js.LICENSE.txt": "/Invision/static/js/2.ec63e68f.chunk.js.LICENSE.txt",
-    "static/media/Header.jpg": "/Invision/static/media/Header.97f3f2b7.jpg",
+    "static/css/main.7d9a83cb.chunk.css.map": "/Invision/static/css/main.7d9a83cb.chunk.css.map",
+    "static/js/2.f2197c7e.chunk.js.LICENSE.txt": "/Invision/static/js/2.f2197c7e.chunk.js.LICENSE.txt",
+    "static/media/Header.jpg": "/Invision/static/media/Header.2dca6fda.jpg",
     "static/media/aboutus.jpg": "/Invision/static/media/aboutus.94be47dd.jpg",
     "static/media/blog-head.jpg": "/Invision/static/media/blog-head.30648716.jpg",
     "static/media/envelope-solid.svg": "/Invision/static/media/envelope-solid.82189696.svg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b1dc85de.js",
-    "static/js/2.ec63e68f.chunk.js",
-    "static/css/main.98da2246.chunk.css",
-    "static/js/main.f81b3151.chunk.js"
+    "static/js/2.f2197c7e.chunk.js",
+    "static/css/main.7d9a83cb.chunk.css",
+    "static/js/main.c4712c51.chunk.js"
   ]
 }
