@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Contact.module.css'
 import icon from '../../images/envelope-solid.svg';
 import ProfileCard from '../AboutUs/Card/Card'
-import { Grid,Paper} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 const Contact = (props) => {
   const contacts ={

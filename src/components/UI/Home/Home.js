@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid,Slide,Container,Button,Card,CardContent,Typography,TextField } from '@material-ui/core';
 import Logo from '../Logo/Logo'
@@ -17,13 +17,38 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Header = (props)=>{
   const classess = useStyles();
+  const [email, setEmail] = useState("");
+  const [modal,setModal] = useState(false)
+  const [isValid, setIsValid] = useState(false);
+
+  const emailpattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
+  const changeHandler = (event) => {
+     setEmail(event.target.value);
+
+  }
+
+  const handleModal = () => {
+     setModal(false)
+     setEmail("");
+  }
+
   const submitHandler = (e) =>{
    e.preventDefault()
- }
+   setIsValid(emailpattern.test(email))
+   setModal(true)
+   console.log(email,isValid,modal);
+}
+
+
+let submit = null
+if(email&&modal){
+  submit = <SubmitModal open={modal} valid={isValid} emailid={email} handleClose={handleModal} />
+}
   return(
     <header className={classes.Header} style={{backgroundImage: `url(${headerBackground}) `,right:props.side?'23vw':null}}>
 
-
+    {submit}
         <Logo />
 
 
@@ -42,8 +67,17 @@ const Header = (props)=>{
                     </CardContent>
                     <CardContent>
                         <form  onSubmit={submitHandler} noValidate>
-                        <TextField style={{width:'70%',marginBottom:'5px'}} id="filled-basic" label="EmailID" variant="filled" />
-                        <Button type='submit' style={{display:'block',width:'50%',margin:'auto'}}><SubmitModal /></Button>
+                        <TextField style={{marginBottom:'10px'}}
+                              id="standard-multiline-flexible"
+                              label="Email-ID"
+                              multiline
+                              rowsMax={4}
+                              value={email}
+                              onChange={changeHandler}
+                            />
+                        <Button type='submit' style={{display:'block',width:'50%',margin:'auto',padding:'20px'}}>
+                        Submit
+                        </Button>
                         </form>
                     </CardContent>
                 </Card>
@@ -57,6 +91,7 @@ const Header = (props)=>{
 
                 </Grid>
                 </Slide>
+
 </header>
   )
 }

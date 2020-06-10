@@ -11,38 +11,30 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function AlertDialogSlide() {
-  const [open, setOpen] = React.useState(false);
+const AlertDialogSlide = (props)=> {
+  const emailpattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  let emailalert = props.valid?`PleaseCheck ${props.emailid} For ID Link`:"Please enter a valid email id"
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div>
-      <p onClick={handleClickOpen}>
-        SUBMIT
-      </p>
       <Dialog
-        open={open}
+        open={props.open}
         TransitionComponent={Transition}
         keepMounted
-        onClose={handleClose}
+        onClose={props.handleClose}
         aria-labelledby="alert-dialog-slide-title"
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle id="alert-dialog-slide-title">{"Submitted"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-          Submitted. Check Your EmailId!
+       {emailalert}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={props.handleClose} color="primary">
             Back
           </Button>
         </DialogActions>
@@ -50,3 +42,4 @@ export default function AlertDialogSlide() {
     </div>
   );
 }
+export default AlertDialogSlide
