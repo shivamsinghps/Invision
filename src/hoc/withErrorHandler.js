@@ -2,6 +2,7 @@ import React, { Component ,Fragment } from 'react';
 
 
 /**
+ *Use in component where you have to make http/grpc calls like when mapping endpoints in a component
  * Represents a HigherOrderComponent to Handle Error thrown by component
  * @function
  */

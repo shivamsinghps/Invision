@@ -7,8 +7,6 @@ const ReadingProgress = ({ target }) => {
     if (!target.current) {
       return;
     }
-    console.log(target);
-
     const element         = target.current;
     const totalHeight     = element.clientHeight - element.offsetTop - (window.innerHeight);
     const windowScrollTop =  window.pageYOffset || 0;

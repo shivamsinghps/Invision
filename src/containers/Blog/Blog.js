@@ -27,7 +27,7 @@ componentDidMount(){
 
 onSizefooter = size => {
   this.setState({footheight:size.height})
-  console.log(this.state.windowheight,'this.state.windowheight',this.state.footheight,'this.state.footheight',size.height,'size.height');
+  
   if(this.state.windowheight && this.state.footheight && this.state.contentheight) {
   const docheight = this.state.windowheight + this.state.footheight + this.state.contentheight - 70
   this.setState({heightDocument:docheight})
@@ -51,7 +51,7 @@ this.setState({scrollY:scroll})
 
 
   render(){
-console.log(this.state);
+
     let top = this.state.top?'-'+this.state.top+'px':null
 
     return(

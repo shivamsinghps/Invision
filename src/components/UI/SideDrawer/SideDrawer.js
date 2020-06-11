@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
 const SideDrawer=(props)=> {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -58,17 +57,18 @@ const SideDrawer=(props)=> {
           <Drawer transitionDuration={600}  classes={{ paper: classes.paper }} anchor='right'  open={open} onClose={toggleDrawer}>
               {list}
               <div className={classes.follow} >
-              <Typography alignLeft variant='h6'>
-                Follow Us On:
-              </Typography>
-              <Facebook fontSize='large'/>
-              <YouTube fontSize='large'/>
-              <Twitter fontSize='large'/>
+                <Typography variant='h6'>
+                  Follow Us On:
+                </Typography>
+                <Facebook fontSize='large'/>
+                <YouTube fontSize='large'/>
+                <Twitter fontSize='large'/>
               </div>
           </Drawer>
         </React.Fragment>
   );
 }
+
 const mapDispatchToProps=dispatch=>{
   return{
     OnsideClick:()=> dispatch(side_toggle()),

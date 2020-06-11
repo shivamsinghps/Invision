@@ -30,10 +30,10 @@ export const authinit = (email,isSignup) =>{
 			returnSecureToken:true
 		}
 
-		let url = 'the endpoint to verify token'
+		let url = 'the endpoint to signin and verify token'
 		if(isSignup)
 		{
-		 url = 'edpoint to get token'
+		 url = 'edpoint to get signup token'
 		}
 
 		axios.post(url,auth_init_data)

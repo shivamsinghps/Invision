@@ -11,6 +11,7 @@ const Contact = (props) => {
     Name:'MailUs',
     Description:'xyz@Invision'
   }
+  // the repeated grid items are for testing only do replace them while mapping actual data
   return(
     <div className={classes.Contact}>
         <Grid container
